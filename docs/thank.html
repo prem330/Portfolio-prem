@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thank You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      font-family: 'Pacifico', cursive;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 80px;
+      color: white;
+      text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 3s ease-in-out infinite alternate, glow 2s ease-in-out infinite alternate, scaleUp 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0.3;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(-40px);
+      }
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #74ebd5, 0 0 40px #ACB6E5;
+      }
+      100% {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ACB6E5, 0 0 50px #74ebd5, 0 0 70px #fff;
+      }
+    }
+
+    @keyframes scaleUp {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.1);
+      }
+    }
+
+    .stars span {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 2s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <h1>Thank You For Hiring Me</h1>
+  <script>
+    const stars = document.querySelector('.stars');
+    for (let i = 0; i < 50; i++) {
+      const star = document.createElement('span');
+      const size = Math.random() * 3 + 1 + 'px';
+      star.style.width = size;
+      star.style.height = size;
+      star.style.top = Math.random() * 100 + 'vh';
+      star.style.left = Math.random() * 100 + 'vw';
+      star.style.animationDuration = Math.random() * 2 + 1 + 's';
+      stars.appendChild(star);
+    }
+  </script>
+</body>
+</html>

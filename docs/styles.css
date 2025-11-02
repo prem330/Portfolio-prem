@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #2b0033, #660044, #b30059);
+  color: #fff;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.role {
+  font-size: 0.9rem;
+  color: #e5b3fe;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffd1f9;
+}
+
+.cta {
+  background: #ff007f;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background 0.3s;
+}
+
+.cta:hover {
+  background: #b55082;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 60px;
+  gap: 40px;
+}
+
+.hero-card {
+  flex: 1;
+  min-width: 300px;
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: #f7d6ff;
+  max-width: 600px;
+}
+
+.features {
+  margin-top: 20px;
+}
+
+.chip {
+  background: rgba(216, 166, 166, 0.15);
+  padding: 8px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 5px;
+  font-size: 0.85rem;
+}
+
+.about {
+  margin-top: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.muted {
+  color: #e8cfff;
+  font-size: 0.9rem;
+}
+
+/* Profile Card */
+.hero-card.profile {
+  flex: 0 0 250px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-card.profile .btn {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 10px 20px;
+  background: #811e4f;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.3s;
+  position: relative;
+}
+
+.hero-card.profile .btn:hover {
+  background: #631f41;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background: rgba(126, 18, 36, 0.85);
+  border-radius: 10px;
+  padding: 10px 0;
+  width: 160px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.dropdown-content a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 20px;
+  transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(5px);
+}
